@@ -119,21 +119,41 @@ For compile see [Installation](#installation) section
 $ ./hsh
 $
 $ ls -l
-total 56
+total 33
 -rw-r--r-- 1 root root  238 Dec  6 08:34 AUTHORS
--rwxr-xr-x 1 root root  393 Dec  6 08:39 generate-authors.sh
--rw-r--r-- 1 root root 2263 Dec  6 08:39 hsh_execute.c
--rw-r--r-- 1 root root  263 Dec  6 08:39 hsh_getenv.c
--rw-r--r-- 1 root root  341 Dec  6 08:39 hsh_getline_command.c
--rw-r--r-- 1 root root  580 Dec  6 08:39 hsh_get_path.c
--rw-r--r-- 1 root root 1160 Dec  6 08:39 hsh_shell.c
--rw-r--r-- 1 root root 1475 Dec  6 08:39 hsh_string_foos.c
--rw-r--r-- 1 root root  695 Dec  6 08:39 hsh_tokenizer.c
--rw-r--r-- 1 root root 1066 Dec  6 08:39 hsh_values_path.c
-drwxr-xr-x 2 root root   37 Dec  6 08:34 img
--rw-r--r-- 1 root root 1461 Dec  6 08:34 man_1_simple_shell
--rw-r--r-- 1 root root 7134 Dec  6 08:34 README.md
--rw-r--r-- 1 root root  824 Dec  6 08:39 shell.h
+-rwxr-xr-x 1 user user 3036 Jun 29 18:02 aux_error1.c
+-rwxr-xr-x 1 user user 1518 Jun 29 18:02 aux_error2.c
+-rw-r--r-- 1 user user 1040 Jun 29 18:02 aux_help2.c
+-rw-r--r-- 1 user user 2412 Jun 29 18:02 aux_help.c
+-rw-r--r-- 1 user user  958 Jun 29 18:02 aux_lists2.c
+-rw-r--r-- 1 user user 1706 Jun 29 18:02 aux_lists.c
+-rw-r--r-- 1 user user 1942 Jun 29 18:02 aux_mem.c
+-rw-r--r-- 1 user user 1369 Jun 29 18:02 aux_stdlib.c
+-rw-r--r-- 1 user user 2207 Jun 29 18:02 aux_str2.c
+-rw-r--r-- 1 user user  420 Jun 29 18:02 aux_str3.c
+-rw-r--r-- 1 user user 1777 Jun 29 18:02 aux_str.c
+-rw-r--r-- 1 user user 2766 Jun 29 18:02 cd.c
+-rw-r--r-- 1 user user  642 Jun 29 18:02 cd_shell.c
+-rw-r--r-- 1 user user 3283 Jun 29 18:02 check_syntax_error.c
+-rw-r--r-- 1 user user 3442 Jun 29 18:02 cmd_exec.c
+-rw-r--r-- 1 user user 1403 Jun 29 18:02 env1.c
+-rw-r--r-- 1 user user 2490 Jun 29 18:02 env2.c
+-rw-r--r-- 1 user user  373 Jun 29 18:02 exec_line.c
+-rw-r--r-- 1 user user  605 Jun 29 18:02 exit_shell.c
+-rw-r--r-- 1 user user  519 Jun 29 18:02 get_builtin.c
+-rwxr-xr-x 1 user user  736 Jun 29 18:02 get_error.c
+-rw-r--r-- 1 user user  842 Jun 29 18:02 get_help.c
+-rw-r--r-- 1 user user 1425 Jun 29 18:02 get_line.c
+-rw-r--r-- 1 user user  179 Jun 29 18:02 get_sigint.c
+-rw-r--r-- 1 user user   65 Aug 28  2019 .gitignore
+-rw-r--r-- 1 user user 1160 Jun 29 18:29 main.c
+-rw-r--r-- 1 user user 5793 Jun 29 18:02 main.h
+-rw-r--r-- 1 user user 5566 Aug 28  2019 man_1_simple_shell
+-rw-r--r-- 1 user user  274 Jun 29 18:02 read_line.c
+-rw-r--r-- 1 user user 7845 Jun 29 18:02 README.md
+-rw-r--r-- 1 user user 3297 Jun 29 18:02 rep_var.c
+-rw-r--r-- 1 user user 1147 Jun 29 18:02 shell_loop.c
+-rw-r--r-- 1 user user 3684 Jun 29 18:02 split.c
 ```
 ### Files
 
@@ -141,19 +161,9 @@ drwxr-xr-x 2 root root   37 Dec  6 08:34 img
 |---|---|
 |[AUTHORS](https://github.com/30501/simple_shell/blob/master/AUTHORS)|Contributors in this repository|
 |[README.md](https://github.com/30501/simple_shell/blob/master/README.md)|Information about our repository|
-|[hsh_execute](https://github.com/30501/simple_shell/blob/master/hsh_execute.c )|Execute builtins and commands|
-|[hsh_get_path.c](https://github.com/30501/simple_shell/blob/master/hsh_get_path.c)|Get variable PATH|
-|[hsh_getenv.c](https://github.com/30501/simple_shell/blob/master/hsh_getenv.c)|Prints enviroment to stndard output|
-|[hsh_getline_command.c](https://github.com/30501/simple_shell/blob/master/hsh_getline_command.c)|Gets input|
-|[hsh_shell.c](https://github.com/30501/simple_shell/blob/master/hsh_shell.c)|Main arguments functions||[hsh_string_foos.c](https://github.com/30501/simple_shell/blob/master/hsh_string_foos.c)|Function to work and modifie string|
-|[hsh_tokenizer.c](https://github.com/30501/simple_shell/blob/master/hsh_tokenizer.c)|Tokenizes a stirng|
-|[man_1_simple_shell](https://github.com/30501/simple_shell/blob/master/man_1_simple_shell)|Manual page our of Simple Shell|
-|[shell.h](https://github.com/30501/simple_shell/blob/master/shell.h)|Prototypes functions and headers|
-
-## Flowchart
-
-![image](img/simple_shell.png)
 
 ## Authors
 
 <li> Bethelhem hunegnaw - <a href="https://github.com/30501">30501</a></li>
+<li> Surafel Abera - <a href="https://github.com/Grey-Surafel-Abera">Grey-Surafel-Abera</a></li>
+
